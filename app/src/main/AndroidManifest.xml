@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chencong.broadcastbestpractive">
+
+    <!--进行权限配置-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity"
+            android:label="@string/app_login">
+            <intent-filter
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".MainActivity"
+            android:label="@string/app_mian"/>
+
+        <receiver android:name=".ForceOfflineReceiver">
+            <intent-filter>
+                <action android:name="com.example.chencong.broadcastbestpractive.FORCE_OFFLINE"/>
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>
