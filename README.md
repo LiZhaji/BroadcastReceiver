@@ -1,0 +1,2 @@
+# BroadcastReceiver
+利用广播BroadcastReceiver实现登录强制下线功能
